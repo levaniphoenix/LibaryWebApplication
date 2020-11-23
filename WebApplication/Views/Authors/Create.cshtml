@@ -1,0 +1,29 @@
+﻿@model DAL.Entities.Author 
+@{
+    ViewData["Title"] = "Create";
+}
+
+<form asp-controller="Authors" asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Surname" class="control-label"></label>
+        <input asp-for="Surname" class="form-control" />
+        <span asp-validation-for="Surname" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Birthplace" class="control-label"></label>
+        <input asp-for="Birthplace" class="form-control" />
+        <span asp-validation-for="Birthplace" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" />
+    </div>
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+</form>

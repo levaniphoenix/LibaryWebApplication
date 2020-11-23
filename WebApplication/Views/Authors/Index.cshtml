@@ -1,0 +1,32 @@
+﻿@model IEnumerable<DAL.Entities.Author>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<span>@foreach (var author in Model)
+{@author.Name;
+}</span>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Surname</th>
+            <th scope="col">Birthplace</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var author in Model)
+        {
+            <tr>
+                <th scope="row">@author.Id</th>
+                <td>@author.Name</td>
+                <td>@author.Surname</td>
+                <td>@author.Birthplace</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a type="button" class="btn btn-primary" asp-action="Create">Create</a>
