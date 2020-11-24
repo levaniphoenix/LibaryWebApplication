@@ -15,14 +15,12 @@ namespace DAL.Entities
         [MaxLength(50)]
         public string Publisher { get; set; }
         [Required]
-        [MaxLength(50)]
-        public string Author { get; set; }
+        public int AuthorId { get; set; }
         [Required]
         [MaxLength(50)]
         public string Condition { get; set; }
         [Required]
-        [MaxLength(50)]
-        public uint Quantity { get; set; }
+        public int Quantity { get; set; }
 
         public Author author { get; set; }
     }

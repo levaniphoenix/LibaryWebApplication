@@ -24,7 +24,10 @@ namespace WebApplication.Models
 
         public void AddBook(Book book)
         {
-            
+            Author author = context.Authors.Single(c=> c.Id==book.AuthorId);
+
+            context.Books.Add(book);
+            context.SaveChanges();
         }
         public IEnumerable<Author> GetAllAuthors()
         {
@@ -33,12 +36,42 @@ namespace WebApplication.Models
 
         public IEnumerable<Book> GetAllBooks()
         {
-            throw new NotImplementedException();
+            return context.Books;
         }
 
         public Book GetBook(int Id)
         {
-            throw new NotImplementedException();
+            Book book = context.Books.Find(Id);
+            if(book!=null)
+            {
+                return book;
+            }
+            return null;
+        }
+        public Author GetAuthor(int Id)
+        {
+            Author author = context.Authors.Find(Id);
+            if (author != null) return author;
+            return null;
+        }
+
+        public void DeleteBook(int Id)
+        {
+            Book book = context.Books.Find(Id);
+            if(book!=null)
+            {
+                context.Books.Remove(book);
+                context.SaveChanges();
+            }
+        }
+        public void DeleteAuthor(int Id)
+        {
+            Author author = context.Authors.Find(Id);
+            if(author!=null)
+            {
+                context.Authors.Remove(author);
+                context.SaveChanges();
+            }
         }
     }
 }

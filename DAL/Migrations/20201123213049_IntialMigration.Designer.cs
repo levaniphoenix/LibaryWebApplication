@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DAL.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20201123154240_SecondMigration")]
-    partial class SecondMigration
+    [Migration("20201123213049_IntialMigration")]
+    partial class IntialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -50,11 +50,12 @@ namespace DAL.Migrations
             modelBuilder.Entity("DAL.Entities.Book", b =>
                 {
                     b.Property<int>("Id")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Author")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(50)")
+                    b.Property<int>("AuthorId")
+                        .HasColumnType("int")
                         .HasMaxLength(50);
 
                     b.Property<string>("Condition")
@@ -72,11 +73,12 @@ namespace DAL.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
-                    b.Property<long>("Quantity")
-                        .HasColumnType("bigint")
-                        .HasMaxLength(50);
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AuthorId");
 
                     b.ToTable("Books");
                 });
@@ -85,7 +87,7 @@ namespace DAL.Migrations
                 {
                     b.HasOne("DAL.Entities.Author", "author")
                         .WithMany("Books")
-                        .HasForeignKey("Id")
+                        .HasForeignKey("AuthorId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });

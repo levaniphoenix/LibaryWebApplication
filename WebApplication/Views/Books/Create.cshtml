@@ -1,0 +1,41 @@
+﻿@model DAL.Entities.Book
+@{
+    ViewData["Title"] = "Create";
+}
+
+<form asp-controller="Books" asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Publisher" class="control-label"></label>
+        <input asp-for="Publisher" class="form-control" />
+        <span asp-validation-for="Publisher" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="AuthorId" class="control-label"></label>
+        <input asp-for="AuthorId" class="form-control" />
+        <span asp-validation-for="AuthorId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Condition" class="control-label"></label>
+        <input asp-for="Condition" class="form-control" />
+        <span asp-validation-for="Condition" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Quantity" class="control-label"></label>
+        <input asp-for="Quantity" class="form-control" />
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Create" />
+    </div>
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+</form>
+

@@ -22,7 +22,7 @@ namespace DAL
             modelBuilder.Entity<Book>()
                 .HasOne(e => e.author)
                 .WithMany(e => e.Books)
-                .HasForeignKey(e => e.Id)
+                .HasForeignKey(e => e.AuthorId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }
