@@ -153,3 +153,11 @@ C:\Users\levan\Desktop\prog\WebApplication\WebApplication\obj\Debug\netcoreapp3.
 C:\Users\levan\Desktop\prog\WebApplication\WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Authors\Create.cshtml.g.cs
 C:\Users\levan\Desktop\prog\WebApplication\WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Books\Index.cshtml.g.cs
 C:\Users\levan\Desktop\prog\WebApplication\WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Books\Create.cshtml.g.cs
+C:\Users\levan\Desktop\prog\WebApplication\WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\levan\Desktop\prog\WebApplication\WebApplication\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\levan\Desktop\prog\WebApplication\WebApplication\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\levan\Desktop\prog\WebApplication\WebApplication\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\levan\Desktop\prog\WebApplication\WebApplication\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\levan\Desktop\prog\WebApplication\WebApplication\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\levan\Desktop\prog\WebApplication\WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Books\Edit.cshtml.g.cs
+C:\Users\levan\Desktop\prog\WebApplication\WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Books\Details.cshtml.g.cs

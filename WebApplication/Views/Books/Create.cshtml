@@ -1,9 +1,10 @@
-﻿@model DAL.Entities.Book
+﻿@model BookCreateViewModel
+@inject IBooksRepository bookRepository
 @{
     ViewData["Title"] = "Create";
 }
 
-<form asp-controller="Books" asp-action="Create" method="post">
+<form enctype="multipart/form-data" asp-controller="Books" asp-action="Create" method="post">
     <div class="form-group">
         <label asp-for="Name" class="control-label"></label>
         <input asp-for="Name" class="form-control" />
@@ -15,19 +16,38 @@
         <span asp-validation-for="Publisher" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="AuthorId" class="control-label"></label>
-        <input asp-for="AuthorId" class="form-control" />
+        <label asp-for="AuthorId" class="control-label">Author</label>
+        <select asp-for="AuthorId" class="form-control" searchable="Search here..">
+            <option value="" disabled selected>Choose The Author</option>
+            @foreach (var author in bookRepository.GetAllAuthors())
+            {
+                <option value="@author.Id">@author.Name @author.Surname</option>
+            }
+        </select>
         <span asp-validation-for="AuthorId" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Condition" class="control-label"></label>
-        <input asp-for="Condition" class="form-control" />
+        <label asp-for="Condition" class="control-label">Book Condition</label>
+        <select asp-for="Condition" class="form-control" searchable="Search here..">
+            <option value="" disabled selected>Choose the Book Condition</option>
+            <option value="New">New</option>
+            <option value="As new">As new</option>
+            <option value="Very Good">Very Good</option>
+            <option value="Good">Good</option>
+            <option value="Fair">Fair</option>
+            <option value="Poor">poor</option>
+        </select>
         <span asp-validation-for="Condition" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Quantity" class="control-label"></label>
         <input asp-for="Quantity" class="form-control" />
         <span asp-validation-for="Quantity" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Photo" class="control-label"></label>
+        <input asp-for="Photo" class="form-control custom-file" />
     </div>
 
     <div class="form-group">

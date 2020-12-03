@@ -25,6 +25,7 @@ namespace WebApplication.Models
         public void AddBook(Book book)
         {
             Author author = context.Authors.Single(c=> c.Id==book.AuthorId);
+            book.AuthorFullName = author.Name + " " + author.Surname;
 
             context.Books.Add(book);
             context.SaveChanges();
@@ -72,6 +73,15 @@ namespace WebApplication.Models
                 context.Authors.Remove(author);
                 context.SaveChanges();
             }
+        }
+        public void EditBook(Book book)
+        {
+            Author author = context.Authors.Single(c => c.Id == book.AuthorId);
+            book.AuthorFullName = author.Name + " " + author.Surname;
+
+            var bookChanges = context.Books.Attach(book);
+            bookChanges.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            context.SaveChanges();
         }
     }
 }

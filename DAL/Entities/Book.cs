@@ -21,7 +21,8 @@ namespace DAL.Entities
         public string Condition { get; set; }
         [Required]
         public int Quantity { get; set; }
-
+        public string AuthorFullName { get; set; }
+        public string PhotoPath { get; set; }
         public Author author { get; set; }
     }
 }

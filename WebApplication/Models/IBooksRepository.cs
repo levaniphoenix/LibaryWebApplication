@@ -16,6 +16,7 @@ namespace WebApplication.Models
         void AddAuthor(Author author);
         void DeleteBook(int id);
         void DeleteAuthor(int id);
+        void EditBook(Book book);
 
     }
 }

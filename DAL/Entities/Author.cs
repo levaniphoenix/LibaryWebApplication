@@ -17,6 +17,8 @@ namespace DAL.Entities
         [Required]
         [MaxLength(50)]
         public string Birthplace { get; set; }
+
+        public string PhotoPath { get; set; }
         public ICollection<Book> Books { get; set; }
     }
 }
