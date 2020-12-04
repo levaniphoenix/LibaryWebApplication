@@ -1,0 +1,27 @@
+﻿@model DAL.Entities.Author
+@{
+    ViewBag.Title = "Author Details";
+    var photoPath = "~/images/" + (Model.PhotoPath ?? "no-image.png");
+}
+
+<div class="row justify-content-center m-0">
+    <div class="col-sm-8">
+        <div class="card">
+            <div class="card-header">
+                <h1>@Model.Name @Model.Surname</h1>
+            </div>
+
+            <div class="card-body text-center">
+                <img class="card-img-top" src="@photoPath" asp-append-version="true" />
+
+                <h4>Author : @Model.Name @Model.Surname</h4>
+                <h4>Birthplace : @Model.Birthplace</h4>
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="Authors" asp-action="index" class="btn btn-primary">Back</a>
+                <a asp-controller="Authors" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+                <a asp-controller="Authors" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>

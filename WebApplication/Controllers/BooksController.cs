@@ -67,7 +67,8 @@ namespace WebApplication.Controllers
             
             //delete the image
             string uploadFolder = Path.Combine(hostingEnvironment.WebRootPath, "images");
-            System.IO.File.Delete(Path.Combine(uploadFolder, book.PhotoPath));
+            if (book.PhotoPath != null)
+                System.IO.File.Delete(Path.Combine(uploadFolder, book.PhotoPath));
             
             //delete the book from databse
             booksRepository.DeleteBook(id);
@@ -98,8 +99,8 @@ namespace WebApplication.Controllers
                 if (model.Photo != null)
                 {
                     string uploadFolder = Path.Combine(hostingEnvironment.WebRootPath, "images");
-
-                    System.IO.File.Delete(Path.Combine(uploadFolder, uniqueFileName));
+                    if (model.oldPhotoPath != null)
+                        System.IO.File.Delete(Path.Combine(uploadFolder, uniqueFileName));
 
                     uniqueFileName = Guid.NewGuid().ToString() + "_" + model.Photo.FileName;
                     string filePath = Path.Combine(uploadFolder, uniqueFileName);

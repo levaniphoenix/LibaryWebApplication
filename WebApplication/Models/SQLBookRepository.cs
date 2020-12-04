@@ -83,5 +83,12 @@ namespace WebApplication.Models
             bookChanges.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             context.SaveChanges();
         }
+        public void EditAuthor(Author author)
+        {
+            
+            var authorChanges = context.Authors.Attach(author);
+            authorChanges.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            context.SaveChanges();
+        }
     }
 }

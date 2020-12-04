@@ -11,17 +11,30 @@
             <th scope="col">Name</th>
             <th scope="col">Surname</th>
             <th scope="col">Birthplace</th>
+            <th scope="col">Action</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var author in Model)
         {
-            <tr>
-                <th scope="row">@author.Id</th>
-                <td>@author.Name</td>
-                <td>@author.Surname</td>
-                <td>@author.Birthplace</td>
-            </tr>
+        <tr>
+            <th scope="row">@author.Id</th>
+            <td>@author.Name</td>
+            <td>@author.Surname</td>
+            <td>@author.Birthplace</td>
+            <td>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Choose Action
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" asp-action="Details" asp-route-id="@author.Id">Details</a>
+                        <a class="dropdown-item" asp-action="Edit" asp-route-id="@author.Id">Edit</a>
+                        <a class="dropdown-item" asp-action="Delete" asp-route-id="@author.Id">Delete</a>
+                    </div>
+                </div>
+            </td>
+        </tr>
         }
     </tbody>
 </table>

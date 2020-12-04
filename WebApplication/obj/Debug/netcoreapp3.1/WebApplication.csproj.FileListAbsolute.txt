@@ -161,3 +161,5 @@ C:\Users\levan\Desktop\prog\WebApplication\WebApplication\bin\Debug\netcoreapp3.
 C:\Users\levan\Desktop\prog\WebApplication\WebApplication\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\levan\Desktop\prog\WebApplication\WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Books\Edit.cshtml.g.cs
 C:\Users\levan\Desktop\prog\WebApplication\WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Books\Details.cshtml.g.cs
+C:\Users\levan\Desktop\prog\WebApplication\WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Authors\Details.cshtml.g.cs
+C:\Users\levan\Desktop\prog\WebApplication\WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Authors\Edit.cshtml.g.cs
