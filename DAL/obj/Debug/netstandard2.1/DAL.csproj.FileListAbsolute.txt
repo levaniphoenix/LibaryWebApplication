@@ -1,0 +1,9 @@
+C:\Users\levan\Desktop\prog\WebApplication\DAL\bin\Debug\netstandard2.1\DAL.deps.json
+C:\Users\levan\Desktop\prog\WebApplication\DAL\bin\Debug\netstandard2.1\DAL.dll
+C:\Users\levan\Desktop\prog\WebApplication\DAL\bin\Debug\netstandard2.1\DAL.pdb
+C:\Users\levan\Desktop\prog\WebApplication\DAL\obj\Debug\netstandard2.1\DAL.csprojAssemblyReference.cache
+C:\Users\levan\Desktop\prog\WebApplication\DAL\obj\Debug\netstandard2.1\DAL.AssemblyInfoInputs.cache
+C:\Users\levan\Desktop\prog\WebApplication\DAL\obj\Debug\netstandard2.1\DAL.AssemblyInfo.cs
+C:\Users\levan\Desktop\prog\WebApplication\DAL\obj\Debug\netstandard2.1\DAL.csproj.CoreCompileInputs.cache
+C:\Users\levan\Desktop\prog\WebApplication\DAL\obj\Debug\netstandard2.1\DAL.dll
+C:\Users\levan\Desktop\prog\WebApplication\DAL\obj\Debug\netstandard2.1\DAL.pdb

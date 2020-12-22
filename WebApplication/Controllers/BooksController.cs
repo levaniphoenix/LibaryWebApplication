@@ -1,4 +1,5 @@
 ﻿using DAL.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
@@ -26,7 +27,7 @@ namespace WebApplication.Controllers
         {
             return View(booksRepository.GetAllBooks());
         }
-
+        [Authorize(Roles ="admin")]
         [HttpGet]
         public IActionResult Create()
         {
@@ -61,6 +62,7 @@ namespace WebApplication.Controllers
             }
             return View();
         }
+        [Authorize(Roles = "admin")]
         public IActionResult Delete(int id)
         {
             var book = booksRepository.GetBook(id);
@@ -75,6 +77,7 @@ namespace WebApplication.Controllers
             
             return RedirectToAction("Index");
         }
+        [Authorize(Roles = "admin")]
         public IActionResult Edit(int id)
         {
             var book = booksRepository.GetBook(id);

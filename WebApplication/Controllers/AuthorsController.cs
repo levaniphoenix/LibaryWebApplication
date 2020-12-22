@@ -1,4 +1,5 @@
 ﻿using DAL.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -25,6 +26,7 @@ namespace WebApplication.Controllers
         {
             return View(booksRepository.GetAllAuthors());
         }
+        [Authorize(Roles = "admin")]
         public IActionResult Edit(int id)
         {
             var author = booksRepository.GetAuthor(id);
@@ -68,6 +70,7 @@ namespace WebApplication.Controllers
             }
             return View(model);
         }
+        [Authorize(Roles = "admin")]
         [HttpGet]
         public IActionResult Create()
         {
@@ -105,6 +108,7 @@ namespace WebApplication.Controllers
             var author = booksRepository.GetAuthor(id);
             return View(author);
         }
+        [Authorize(Roles = "admin")]
         public IActionResult Delete(int id)
         {
             var author = booksRepository.GetAuthor(id);

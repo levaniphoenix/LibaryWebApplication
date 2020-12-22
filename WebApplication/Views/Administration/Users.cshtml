@@ -1,0 +1,23 @@
+﻿@model IEnumerable<IdentityUser>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Username</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+        <tr>
+            <td>@user.Email</td>
+            <td><a class="btn btn-info" asp-action="EditUser" asp-route-id="@user.Id"></a> edit</td>
+        </tr>
+        }
+    </tbody>
+</table>
+<a type="button" class="btn btn-primary" asp-controller="Account" asp-action="Register">Create</a>

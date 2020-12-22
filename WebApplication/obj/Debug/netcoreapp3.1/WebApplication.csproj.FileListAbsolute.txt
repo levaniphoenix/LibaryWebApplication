@@ -163,3 +163,8 @@ C:\Users\levan\Desktop\prog\WebApplication\WebApplication\obj\Debug\netcoreapp3.
 C:\Users\levan\Desktop\prog\WebApplication\WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Books\Details.cshtml.g.cs
 C:\Users\levan\Desktop\prog\WebApplication\WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Authors\Details.cshtml.g.cs
 C:\Users\levan\Desktop\prog\WebApplication\WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Authors\Edit.cshtml.g.cs
+C:\Users\levan\Desktop\prog\WebApplication\WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\levan\Desktop\prog\WebApplication\WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Administration\CreateRole.cshtml.g.cs
+C:\Users\levan\Desktop\prog\WebApplication\WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Administration\ListRoles.cshtml.g.cs
+C:\Users\levan\Desktop\prog\WebApplication\WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Administration\Users.cshtml.g.cs
+C:\Users\levan\Desktop\prog\WebApplication\WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Administration\EditUser.cshtml.g.cs
