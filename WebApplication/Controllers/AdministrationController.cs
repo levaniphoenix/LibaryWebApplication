@@ -11,6 +11,7 @@ using WebApplication.Models.ViewModels;
 
 namespace WebApplication.Controllers
 {
+    [Authorize]
     public class AdministrationController : Controller
     {
         private readonly RoleManager<IdentityRole> roleManager;
@@ -61,7 +62,7 @@ namespace WebApplication.Controllers
             var users = userManager.Users;
             return View(users);
         }
-        [Authorize(Roles ="admin")]
+        //[Authorize(Roles ="admin")]
         public async Task<IActionResult> EditUser(string id)
         {
             IdentityUser user = await userManager.FindByIdAsync(id);
